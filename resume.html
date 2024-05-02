@@ -1,42 +1,280 @@
 <!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
     <head>
-        <title>My Resume</title>
+        <title>Justin Koh - Resume</title>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
 
-        <!-- Header -->
+			<!-- Intro -->
+			<div id="intro">
+				<h1>My<br>
+				Resume</h1>
+				<p>My skills and experience across data analytics and finance.<br>
+					<br>Connect with me on <a href="https://www.linkedin.com/in/justinkoh">LinkedIn</a>.
+					<br>Dig into my project code on <a href="https://www.github.com/jeesuk">GitHub</a>.
+				</p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+            <!-- Header -->
             <header id="header">
-                <a href="#" class="logo">Jane Doe</a>
+                <a href="about.html" class="logo">Resume</a>
             </header>
 
-        <!-- Main -->
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Main</a></li>
+                    <li class="active"><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/justinkoh" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://www.github.com/jeesuk" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
             <div id="main">
+                <!-- Post -->
                 <section class="post">
-                    <header class="major">
-                        <span class="date">April 2024</span>
-                        <h1>About Me</h1>
-                        <p>Brief introduction about yourself...</p>
-                    </header>
-                    <h2>Education</h2>
-                    <p>Detailed list of your educational background...</p>
-                    <h2>Experience</h2>
-                    <p>Detailed list of your work experience...</p>
-                    <h2>Skills</h2>
-                    <p>List of your skills...</p>
-                    <h2>Contact</h2>
-                    <p>How to contact you...</p>
+                    <div class="name-header">
+                        <h1r>Justin Koh</h1r>
+                    </div>
+					<div class="basic-info">
+						<div class="contact-info">
+							<span>Los Angeles, CA</span>
+							<span><a href="mailto:koh.justin@gmail.com">koh.justin@gmail.com</a></span>
+						</div>
+						<div class="social-links">
+							<span><a href="https://github.com/jeesuk">github.com/jeesuk</a></span>
+							<span><a href="https://linkedin.com/in/justinkoh">linkedin.com/in/justinkoh</a></span>
+						</div>
+					</div>
+                    <div class="resume-content">
+                        <section id="about">
+                            <h2 class='section-header'>Work Experience</h2>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Disney Streaming Services</b></span> | <span class="title">Data Analyst II</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Los Angeles, CA</span> | <span class="date">Jul 2021 – Jun 2023</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Led the ETL of dashboards monitoring email, push notification, and in-app performance, using Databricks, Snowflake, and Looker</li>
+										<li>Performed ad-hoc queries to assess performance of marketing messages for various products</li>
+										<li>Converted the ESPN+ monthly business review from an unorganized document into a Looker dashboard, giving stakeholders added understanding of content performance</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Pex</b></span> | <span class="title">Data Analyst II</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Los Angeles, CA</span> | <span class="date">Oct 2019 – May 2021</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Generated content performance insights using complex SQL queries (PostgreSQL, BigQuery) and Python to support business development and marketing initiatives</li>
+										<li>Created and presented a detailed analysis of Facebook video performance for a major music rightsholder client, resulting in retention of the client</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Everytable</b></span> | <span class="title">Director of Analytics</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Los Angeles, CA</span> | <span class="date">Mar 2017 – Jun 2018</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Led all processes related to meal volume production, catering orders, and KPIs</li>
+										<li>Reduced meal waste by 5 times its original level, resulting in 400 bps in EBITDA savings</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Hulu</b></span> | <span class="title">Senior Analyst, Content Valuation</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Santa Monica, CA</span> | <span class="date">Nov 2015 – Feb 2017</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Managed Hulu Originals and Anime, inclusive of modeling, valuation, long-range planning, and financial trade-offs analyses</li>
+										<li><b>Selected Deal Experience:</b> Blindspot, Lucifer, Warner Bros. library titles, Scream Queens, and My Hero Academia</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Skyview Capital</b></span> | <span class="title">Private Equity Associate</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Los Angeles, CA</span> | <span class="date">Oct 2014 – Oct 2015</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Supported all aspects of deal processes – qualification, due diligence, presentations, financial modeling, and deal negotiations</li>
+										<li><b>Selected Deal Experience:</b> Buyout of Syncplicity from EMC Corporation</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Vantage Oncology</b></span> | <span class="title">Finance Associate</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Manhattan Beach, CA</span> | <span class="date">Oct 2012 – Jul 2013</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Financial modeling for budgeting, forecasting, month-end close</li>
+										<li><b>Selected Deal Experience:</b> $250 million bond raise (9.5%, senior secured, due 2017)</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Barclays</b></span> | <span class="title">Investment Banking Analyst</span> 
+									</div>
+									<div class="job-location-and-date">
+										<span class="location">Menlo Park, CA</span> | <span class="date">Jun 2020 – Sept 2012</span>
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Financial modeling, valuation, due diligence, and presentations to support deal execution</li>
+										<li><b>Selected Deal Experience:</b> Jazz Pharmaceuticals’ $700 million acquisition of EUSA Pharma</li>
+									</ul>
+							<h2 class='section-header'>Independent Projects</h2>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>NFL Wide Receivers by Playing Style</b></span> | <span class="title">github.com/jeesuk/nfl_wr_classifier (work in progress)</span> 
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>K-Nearest Neighbors classifier in Python that categorizes NFL wide receivers by playing style.</li>
+										<li>Uses Sportradar play-by-play data API, along with data from Pro Football Focus Premium, and the NFL Combine.</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Predicting Arrests by the NYPD</b></span> | <span class="title">github.com/jeesuk/NYPD-arrests</span> 
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>Using 2018 data provided by the NYPD, I predicted whether being stopped by an NYPD officer would result in an arrest with logistic regression, random forest, and decision tree models.</li>
+										<li>Utilized Pandas and NumPy to clean and engineer new features; manually categorized 11,000 different values for ‘suspect demeanor’ and ‘suspect appearance’ features.</li>
+									</ul>
+								<div class="job-header">
+									<div class="job-title-and-company">
+										<span class="company"><b>Politics-Adjacent Guests on the Late Show</b></span> | <span class="title">github.com/jeesuk/late-show-colbert</span> 
+									</div>
+								</div>
+									<ul class="job-description">
+										<li>An exploratory data analysis of the views for YouTube uploads of Colbert’s interviews as host of the Late Show, specifically highlighting the view counts of interviews with politicians, journalists, and others involved with politics.</li>
+									</ul>
+                        </section>
+                    </div>
+                    <div class="sidebar">
+                        <!-- <section id="skills"> -->
+                            <h2 class="sidebar-header">Skills</h2>
+                            <b>TOOLS</b>
+							<ul>
+								<li>SQL - Snowflake, PostgreSQL, BigQuery, MySQL</li>
+                                <li>Python - Pandas, NumPy, Matplotlib, scikit-learn</li>
+                                <li>Git, GitHub</li>
+                                <li>Notebooks - Databricks, Jupyter</li>
+								<li>Data visualization - Looker, Tableau, Power BI</li>
+								<li>Excel, Google Sheets</li>
+								<li>Google Analytics</li>
+                            </ul><br>
+							<b>KNOWLEDGE</b>
+							<ul>
+								<li>Exploratory data analysis</li>
+                                <li>Data visualization, dashboards</li>
+                                <li>A/B testing, experimentation</li>
+                                <li>Regression, classification</li>
+								<li>Statistics, probability</li>
+								<li>ETL/ELT</li>
+								<li>Databases, data models</li>
+								<li>Financial modeling in Excel</li>
+								<li>Leveraged buyouts, M&A, capital raises, valuation, corporate strategy</li>
+                            </ul><br>
+                        <!-- </section> -->
+                        <!-- <section id="education"> -->
+                            <h2 class="sidebar-header">Education</h2>
+							<b>GMAT</b><br>
+							2009<br>
+							730, <i>96th percentile</i><br>
+							Quantitive - 50 | Verbal - 40
+							<br><br>
+							<b>University of Washington</b><br>
+							<div class="sidebar-location-and-date">
+								<span class="sidebar-location">Seattle, WA</span> | <span class="date">2008</span><br>
+							BA in Business Administration - Finance
+							</div>
+							<br>
+							<b>Yonsei University</b><br>
+							<div class="sidebar-location-and-date">
+								<span class="sidebar-location">Seoul, Republic of Korea</span> | <span class="date">2007</span><br>
+							Intensive Korean Language
+							<br><br>
+							</div><br>
+                        <!-- </section> -->
+                        <!-- <section id="interests"> -->
+                            <h2 class="sidebar-header">Interests</h2>
+							<ul>
+								<li>Powerlifting - 1,220 lbs total at 164 lbs bodyweight</li>
+								<li>Drink mixology</li>
+								<li>Film, TV</li>
+							</ul>
+                        </section>
+                    </div>
                 </section>
             </div>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>Los Angeles, CA, USA</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:koh.justin@gmail.com">koh.justin@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/justinkoh" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.github.com/jeesuk" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
 
-    </body>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Justin Koh</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
