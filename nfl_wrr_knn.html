@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Justin Koh - About Me</title>
+		<title>NFL WRs by Playing Style</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,9 +19,9 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>About<br />
-							Me</h1>
-						<p>My background, hobbies, and interests.<br>
+						<h1>Categorizing NFL Wide Receivers<br />
+							by Playing Style</h1>
+						<p>
 							<br>Connect with me on <a href="https://www.linkedin.com/in/justinkoh">LinkedIn</a>.
 							<br>Dig into my project code on <a href="https://www.github.com/jeesuk">GitHub</a>.
 						</p>
@@ -32,15 +32,15 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">About Me</div>
+						<div class="logo">Project Summary</div>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">Main</a></li>
+							<li class="active"><a href="index.html">Main</a></li>
 							<li><a href="resume.html">Resume</a></li>
-							<li class="active"><a href="about.html">About Me</a></li>
+							<li><a href="about.html">About Me</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/justinkoh" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -53,18 +53,15 @@
 
 						<!-- Post -->
 							<section class="post">
-								<header class="major">
+								<!-- <header class="major">
 									<h1>In<br />
 									Progress</h1>
-								</header>
+								</header> -->
 
-								<!-- Text stuff -->
-									<h2>Introduction</h2>
-									<p>This is where I will add information about me.</p>
-									<hr />
-									<!-- <hr /> -->
-
-
+								<!-- Inserted README Content -->
+								<article class="markdown-body" id="readme-content">
+									<!-- README content will be injected here -->
+								</article>
 							</section>
 
 					</div>
@@ -98,6 +95,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Marked library loaded before any custom script -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -105,6 +103,27 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Ensure the marked library is loaded before using it
+				if (typeof marked === 'undefined') {
+					console.error('Marked library not loaded.');
+				} else {
+					// Fetch and render the README.md content
+					fetch('nfl_wr_knn_README.md')
+						.then(response => {
+							if (!response.ok) {
+								throw new Error('Network response was not ok ' + response.statusText);
+							}
+							return response.text();
+						})
+						.then(text => {
+							document.getElementById('readme-content').innerHTML = marked.parse(text);
+						})
+						.catch(error => {
+							document.getElementById('readme-content').innerHTML = 'Error loading README file: ' + error;
+						});
+				}
+			</script>
 
 	</body>
 </html>
