@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	height: 100%;
 }
 
 ol, ul {
@@ -2848,6 +2849,18 @@ input, select, textarea {
 		padding-left: 1.25rem;
 	}
 
+	ol > li > p, ol > li > ul {
+		margin: 0rem 0 .5rem 0;
+	}
+
+	article > ol > li {
+		margin: 0rem 0 2rem 0;
+	}
+
+	.before-l {
+		margin: 0rem 0 .5rem 0;
+	}
+
 		ol li {
 			padding-left: 0.25rem;
 		}
@@ -3231,7 +3244,7 @@ input, select, textarea {
 		transition: opacity 0.5s ease;
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
+		height: 100%;
 	}
 
 		#wrapper > .bg {
@@ -3766,9 +3779,11 @@ input, select, textarea {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
+		height: 100%;
 		width: calc(100% - 4rem);
 		max-width: 85rem;
 		z-index: 2;
+		display: flex;
 	}
 
 		#main > * {
@@ -3787,6 +3802,7 @@ input, select, textarea {
 
 		#main > .post {
 			padding: 8rem 8rem 6rem 8rem ;
+			flex: 1;
 		}
 
 			#main > .post header.major > .date {
@@ -4698,4 +4714,40 @@ input, select, textarea {
 	/* For contact info at the bottom. Line height affected by change to line-height in body class. */
 #footer section.alt p {
     line-height: 2.375; /* Change this value to your preferred line height */
+}
+
+/* Floating sidebar styles */
+#sidebar {
+    position: sticky;
+	top: 0px;
+    left: 2.5rem;
+	height: 100vh;
+    width: 200px;
+    background-color: #f4f4f438;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+	z-index: 10;
+}
+
+#sidebar h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
 }
