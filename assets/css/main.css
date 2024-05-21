@@ -31,7 +31,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	height: 100%;
 }
 
 ol, ul {
@@ -3232,7 +3231,7 @@ input, select, textarea {
 		transition: opacity 0.5s ease;
 		position: relative;
 		z-index: 1;
-		height: 100%;
+		overflow: hidden;
 	}
 
 		#wrapper > .bg {
@@ -3766,8 +3765,7 @@ input, select, textarea {
 	#main {
 		background-color: #ffffff;
 		position: relative;
-		margin: 0 auto;
-		height: 100%;
+		margin: 0 auto;		
 		width: calc(100% - 4rem);
 		max-width: 85rem;
 		z-index: 2;
@@ -3789,7 +3787,6 @@ input, select, textarea {
 
 		#main > .post {
 			padding: 8rem 8rem 6rem 8rem ;
-			flex: 1;
 		}
 
 			#main > .post header.major > .date {
