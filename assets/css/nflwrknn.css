@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 #main {
     background-color: #ffffff;
     position: relative;
@@ -7,6 +11,10 @@
     max-width: 85rem;
     z-index: 2;
     display: flex;
+}
+
+#main > .post {
+    flex: 1;
 }
 
 /* Spacing between bullet points */
@@ -23,6 +31,10 @@ article > ol > li {
     margin: 0rem 0 .5rem 0;
 }
 
+#wrapper {
+    height: 100%;
+    overflow: visible;
+}
 
 /* Floating sidebar styles */
 #sidebar {
