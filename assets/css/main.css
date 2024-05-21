@@ -2849,6 +2849,7 @@ input, select, textarea {
 		padding-left: 1.25rem;
 	}
 
+	/* Spacing between bullet points */
 	ol > li > p, ol > li > ul {
 		margin: 0rem 0 .5rem 0;
 	}
@@ -2857,6 +2858,7 @@ input, select, textarea {
 		margin: 0rem 0 2rem 0;
 	}
 
+	/* Spacing between p and proceeding list */
 	.before-l {
 		margin: 0rem 0 .5rem 0;
 	}

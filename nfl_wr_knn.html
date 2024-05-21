@@ -136,7 +136,8 @@
 						.then(text => {
 							const contentDiv = document.getElementById('readme-content');
                 			contentDiv.innerHTML = marked.parse(text, { renderer: renderer });
-
+							
+							// Controls the spacing between p and proceeding list by  attaching class to the p
 							document.querySelectorAll('p + ol').forEach(ol => {
 								ol.previousElementSibling.classList.add('before-l');
 							});
