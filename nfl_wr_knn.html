@@ -108,16 +108,20 @@
 
 		renderer.heading = function(text, level, raw, slugger) {
 			// Only affect ## markup (level 2)
-			if (level === 2) {
+			console.log('text', text)
+			let rawText = text?.text;
+			const depth = text?.depth;
+			console.log('rawText', rawText)
+			console.log('depth', depth)
+			if (depth === 2) {
 				if (typeof text !== 'string') {
-					console.error('Expected a string but got:', text);
-					text = String(text); // Convert non-string values to string
+					rawText = String(rawText); // Convert non-string values to string
 				}
-				const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+				const escapedText = rawText.toLowerCase().replace(/[^\w]+/g, '-');
 				return `
-					<h${level} id="${escapedText}">
-						${text}
-					</h${level}>
+					<h${depth} id="${escapedText}">
+						${rawText}
+					</h${depth}>
 				`;
 			} else {
 				// Call the original heading method for other levels
