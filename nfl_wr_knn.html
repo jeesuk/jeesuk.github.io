@@ -101,6 +101,34 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+		const renderer = new marked.Renderer();
+
+		// Save a reference to the original heading method
+		const originalHeading = renderer.heading;
+
+		renderer.heading = function(text, level, raw, slugger) {
+			// Only affect ## markup (level 2)
+			console.log('text', text)
+			let rawText = text?.text;
+			const depth = text?.depth;
+			console.log('rawText', rawText)
+			console.log('depth', depth)
+			if (depth === 2) {
+				if (typeof text !== 'string') {
+					rawText = String(rawText); // Convert non-string values to string
+				}
+				const escapedText = rawText.toLowerCase().replace(/[^\w]+/g, '-');
+				return `
+					<h${depth} id="${escapedText}">
+						${rawText}
+					</h${depth}>
+				`;
+			} else {
+				// Call the original heading method for other levels
+				return originalHeading.call(this, text, level, raw, slugger);
+			}
+		};
+		
         if (typeof marked === 'undefined') {
             console.error('Marked library not loaded.');
         } else {
@@ -119,7 +147,7 @@
                     console.log('Fetched README content:', text);
 
                     const contentDiv = document.getElementById('readme-content');
-                    contentDiv.innerHTML = marked.parse(text);
+                    contentDiv.innerHTML = marked.parse(text, { renderer: renderer });
 
                     document.querySelectorAll('p + ol').forEach(ol => {
                         ol.previousElementSibling.classList.add('before-l');
